@@ -14,10 +14,9 @@ exports.register = async (req, res) => {
         user: user,
       });
     }
-  } catch (error) {
+  } catch (err) {
     res.status(500).send({
       message: 'Erro ao tentar registrar usuário',
-      error: err,
     });
   }
 };
