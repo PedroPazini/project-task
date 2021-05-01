@@ -1,11 +1,12 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const regRoute = require('./src/routes/register-route.js');
 
-const app = express();
 const PORT = 3000;
-const router = express.Router();
+const app = express();
+var router = express.Router();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
